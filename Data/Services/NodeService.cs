@@ -6,7 +6,9 @@ using MapsterMapper;
 
 namespace Data.Services;
 
-public class NodeService(INodeRepository nodeRepository, IMapper mapper) : INodeService
+public class NodeService(INodeRepository nodeRepository, 
+    INodeGroupRepository nodeGroupRepository,
+    IMapper mapper) : INodeService
 {
     public async Task<NodeDto> CreateAsync(CreateNodeDto dto)
     {
@@ -33,7 +35,11 @@ public class NodeService(INodeRepository nodeRepository, IMapper mapper) : INode
         if (dto.Text != null)
             oldNode.Text = dto.Text;
         if (dto.GroupId != null)
+        {
             oldNode.GroupId = dto.GroupId;
+            oldNode.Group = await nodeGroupRepository.EnsureExistsAsync(dto.GroupId);
+        }
+            
         
         nodeRepository.Update(oldNode);
         await nodeRepository.SaveChangesAsync();

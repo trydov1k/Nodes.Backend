@@ -28,4 +28,10 @@ public class NodeGroupService(INodeGroupRepository nodeGroupRepository, IMapper 
         var groups = await nodeGroupRepository.GetAllAsync();
         return mapper.Map<NodeGroupDto>(groups);
     }
+
+    public async Task<NodeGroupDto> GetByIdAsync(Guid id)
+    {
+        var group = await nodeGroupRepository.EnsureExistsAsync(id);
+        return mapper.Map<NodeGroupDto>(group);
+    }
 }
