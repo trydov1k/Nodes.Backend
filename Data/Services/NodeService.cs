@@ -37,7 +37,7 @@ public class NodeService(INodeRepository nodeRepository,
         if (dto.GroupId != null)
         {
             oldNode.GroupId = dto.GroupId;
-            oldNode.Group = await nodeGroupRepository.EnsureExistsAsync(dto.GroupId);
+            oldNode.Group = await nodeGroupRepository.EnsureExistsAsync(dto.GroupId.Value);
         }
             
         
