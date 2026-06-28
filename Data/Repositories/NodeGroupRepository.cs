@@ -1,36 +1,38 @@
 using Domain;
+using Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories;
 
 public class NodeGroupRepository(AppDbContext context) : INodeGroupRepository
 {
-    public Task AddAsync(NodeGroup entity)
+    public async Task AddAsync(NodeGroup entity)
     {
-        throw new NotImplementedException();
+        await context.NodeGroups.AddAsync(entity);
     }
 
-    public Task UpdateAsync(NodeGroup entity)
+    public void Update(NodeGroup entity)
     {
-        throw new NotImplementedException();
+        context.NodeGroups.Update(entity);
     }
 
-    public Task DeleteAsync(NodeGroup entity)
+    public void Delete(NodeGroup entity)
     {
-        throw new NotImplementedException();
+        context.NodeGroups.Remove(entity);
     }
 
-    public Task SaveChangesAsync()
+    public async Task SaveChangesAsync()
     {
-        throw new NotImplementedException();
+        await context.SaveChangesAsync();
     }
 
-    public Task<NodeGroup?> GetByIdAsync(int id)
+    public async Task<NodeGroup?> GetByIdAsync(Guid id)
     {
-        throw new NotImplementedException();
+        return await context.NodeGroups.FindAsync(id);
     }
 
-    public Task<List<NodeGroup>> GetAllAsync()
+    public async Task<List<NodeGroup>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        return await context.NodeGroups.ToListAsync();
     }
 }

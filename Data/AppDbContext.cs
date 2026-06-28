@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data;
@@ -27,7 +28,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
         modelBuilder.Entity<Node>()
             .HasOne(node => node.Group)
             .WithMany(group => group.Nodes)
-            .HasForeignKey(node => node.NodeId)
+            .HasForeignKey(node => node.GroupId)
             .OnDelete(DeleteBehavior.Cascade);
         
         base.OnModelCreating(modelBuilder);

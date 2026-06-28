@@ -1,0 +1,16 @@
+C:\coding\С#\NodesApi\Data\bin\Debug\net10.0\Data.deps.json
+C:\coding\С#\NodesApi\Data\bin\Debug\net10.0\Data.dll
+C:\coding\С#\NodesApi\Data\bin\Debug\net10.0\Data.pdb
+C:\coding\С#\NodesApi\Data\bin\Debug\net10.0\Domain.dll
+C:\coding\С#\NodesApi\Data\bin\Debug\net10.0\Domain.pdb
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.csproj.AssemblyReference.cache
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.AssemblyInfoInputs.cache
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.AssemblyInfo.cs
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.csproj.CoreCompileInputs.cache
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.sourcelink.json
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.csproj.Up2Date
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.dll
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\refint\Data.dll
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\Data.pdb
+C:\coding\С#\NodesApi\Data\obj\Debug\net10.0\ref\Data.dll
