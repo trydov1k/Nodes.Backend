@@ -10,4 +10,6 @@ public interface INodeService
     Task DeleteAsync(Guid id);
     Task<NodeDto?> GetByIdAsync(Guid id);
     Task<List<NodeDto>> GetAllAsync();
+
+    Task<List<NodeDto>> GetByGroupId(Guid groupId);
 }

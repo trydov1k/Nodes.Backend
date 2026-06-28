@@ -66,4 +66,10 @@ public class NodeService(INodeRepository nodeRepository,
         
         return mapper.Map<List<NodeDto>>(nodes);
     }
+
+    public async Task<List<NodeDto>> GetByGroupId(Guid groupId)
+    {
+        var nodes = await nodeRepository.GetByGroupId(groupId);
+        return mapper.Map<List<NodeDto>>(nodes);
+    }
 }

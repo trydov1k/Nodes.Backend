@@ -23,21 +23,21 @@ public class NodeController(INodeService nodeService) : ControllerBase
         return Ok(ApiResponse.Success(nodes));
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:guid}")]
     public async Task<ActionResult<ApiResponse<NodeDto>>> GetById([FromRoute] Guid id)
     {
         var node = await nodeService.GetByIdAsync(id);
         return Ok(ApiResponse.Success(node));
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("{id:guid}")]
     public async Task<ActionResult<ApiResponse<NodeDto>>> Update([FromRoute] Guid id, [FromBody] UpdateNodeDto dto)
     {
         var updatedNode = await nodeService.UpdateAsync(id, dto);
         return Ok(ApiResponse.Success(updatedNode));
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:guid}")]
     public async Task<ActionResult<ApiResponse<NodeDto>>> Delete([FromRoute] Guid id)
     {
         await nodeService.DeleteAsync(id);

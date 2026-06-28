@@ -7,7 +7,8 @@ namespace Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class NodeGroupController(INodeGroupService nodeGroupService) : ControllerBase
+public class NodeGroupController(INodeGroupService nodeGroupService,
+    INodeService nodeService) : ControllerBase
 {
     [HttpPost]
     public async Task<ActionResult<ApiResponse<NodeGroupDto>>> Create([FromBody] CreateNodeGroupDto dto)
@@ -21,5 +22,34 @@ public class NodeGroupController(INodeGroupService nodeGroupService) : Controlle
     {
         var groups = await nodeGroupService.GetAllAsync();
         return Ok(ApiResponse.Success(groups));
+    }
+
+    [HttpGet("{id:guid}")]
+    public async Task<ActionResult<ApiResponse<NodeGroupDto>>> GetById([FromRoute] Guid id)
+    {
+        var group = await nodeGroupService.GetByIdAsync(id);
+        return Ok(ApiResponse.Success(group));
+    }
+
+    [HttpPut("{id:guid}")]
+    public async Task<ActionResult<ApiResponse<NodeGroupDto>>> Update([FromRoute] Guid id,
+        [FromBody] UpdateNodeGroupDto dto)
+    {
+        var updatedGroup = nodeGroupService.UpdateAsync(id, dto);
+        return Ok(ApiResponse.Success(updatedGroup));
+    }
+
+    [HttpDelete("{id:guid}")]
+    public async Task<ActionResult<ApiResponse<NodeGroupDto>>> Delete([FromRoute] Guid id)
+    {
+        await nodeGroupService.DeleteAsync(id);
+        return NoContent();
+    }
+
+    [HttpGet("{id}/nodes")]
+    public async Task<ActionResult<ApiResponse<List<NodeGroupDto>>>> GetGroupNodes([FromRoute] Guid id)
+    {
+        var nodes = await nodeService.GetByGroupId(id);
+        return Ok(ApiResponse.Success(nodes));
     }
 }

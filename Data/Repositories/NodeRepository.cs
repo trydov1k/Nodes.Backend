@@ -39,4 +39,11 @@ public class NodeRepository(AppDbContext context) : INodeRepository
             .Include(node => node.Group)
             .ToListAsync();
     }
+
+    public Task<List<Node>> GetByGroupId(Guid groupId)
+    {
+        return context.Nodes
+            .Where(node => node.GroupId == groupId)
+            .ToListAsync();
+    }
 }
