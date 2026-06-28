@@ -1,10 +1,9 @@
-using Domain;
 using Domain.DTOs.NodeGroups;
 using Domain.DTOs.Nodes;
 using Domain.Models;
 using Mapster;
 
-namespace Api;
+namespace Data;
 
 public static class MappingConfig
 {

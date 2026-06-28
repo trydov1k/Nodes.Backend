@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Users\\mdimo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\coding\\С#\\NodesApi\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\coding\\С#\\NodesApi\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\coding\\С#\\NodesApi\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mdimo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

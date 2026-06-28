@@ -1,5 +1,4 @@
 using Data.Services;
-using Domain;
 using Domain.DTOs;
 using Domain.DTOs.Nodes;
 using Microsoft.AspNetCore.Mvc;
@@ -31,7 +30,7 @@ public class NodeController(INodeService nodeService) : ControllerBase
         return Ok(ApiResponse.Success(node));
     }
 
-    [HttpPut]
+    [HttpPut("{id}")]
     public async Task<ActionResult<ApiResponse<NodeDto>>> Update([FromRoute] Guid id, [FromBody] UpdateNodeDto dto)
     {
         var updatedNode = await nodeService.UpdateAsync(id, dto);
