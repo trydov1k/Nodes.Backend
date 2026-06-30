@@ -4,10 +4,23 @@ using Domain.DTOs;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-// Загрузка .env
-DotNetEnv.Env.TraversePath().Load();
+DotNetEnv.Env.TraversePath().Load();  // Загрузка .env
 
 var builder = WebApplication.CreateBuilder(args);
+
+const string corsPolicy = "Frontend";
+var corsOrigins = builder.Configuration["CORS_ORIGINS"]
+                  ?? throw new InvalidOperationException("env-parameter CORS_ORIGINS is required");
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(corsPolicy, policy =>
+    {
+        policy
+            .WithOrigins(corsOrigins.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 builder.Services.AddMapping();
 builder.Services.AddContext(builder.Configuration);
@@ -57,5 +70,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();   
 }
+
+app.UseCors(corsPolicy);
+
 app.MapControllers();
 app.Run();

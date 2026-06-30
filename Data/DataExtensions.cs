@@ -3,6 +3,7 @@ using Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Npgsql;
 
 namespace Data;
 
@@ -18,7 +19,14 @@ public static class DataExtensions
         
         serviceCollection.AddDbContext<AppDbContext>(x =>
         {
-            x.UseNpgsql($"Host={dbHost};Port={dbPort};Database={dbName};Username={dbUser};Password={dbPassword}");
+            var builder = new NpgsqlConnectionStringBuilder();
+            builder.Host = dbHost;
+            builder.Port = int.Parse(dbPort);
+            builder.Database = dbName;
+            builder.Username = dbUser;
+            builder.Password = dbPassword;
+            
+            x.UseNpgsql(builder.ConnectionString);
         });
 
         return serviceCollection;
