@@ -21,10 +21,10 @@ public class NodeGroupController(INodeGroupService nodeGroupService) : Controlle
     }
 
     [HttpGet]
-    public async Task<ActionResult<ApiResponse<List<NodeGroupDto>>>> GetAll()
+    public async Task<ActionResult<ApiResponse<PagedResult<NodeGroupDto>>>> GetAll([FromQuery] PaginationQuery query)
     {
-        var groups = await nodeGroupService.GetAllAsync();
-        return Ok(ApiResponse.Success(groups));
+        var result = await nodeGroupService.GetPagedAsync(query);
+        return Ok(ApiResponse.Success(result));
     }
 
     [HttpGet("{id:guid}")]
@@ -50,9 +50,9 @@ public class NodeGroupController(INodeGroupService nodeGroupService) : Controlle
     }
 
     [HttpGet("{id:guid}/nodes")]
-    public async Task<ActionResult<ApiResponse<List<NodeDto>>>> GetGroupNodes([FromRoute] Guid id)
+    public async Task<ActionResult<ApiResponse<PagedResult<NodeDto>>>> GetGroupNodes([FromRoute] Guid id, [FromQuery] PaginationQuery query)
     {
-        var nodes = await nodeGroupService.GetNodesByGroupId(id);
-        return Ok(ApiResponse.Success(nodes));
+        var result = await nodeGroupService.GetNodesByGroupId(id, query);
+        return Ok(ApiResponse.Success(result));
     }
 }

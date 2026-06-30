@@ -1,3 +1,4 @@
+using Domain.DTOs;
 using Domain.DTOs.Nodes;
 
 namespace Application.Services;
@@ -8,7 +9,7 @@ public interface INodeService
     Task<NodeDto> UpdateAsync(Guid id, UpdateNodeDto dto);
     Task DeleteAsync(Guid id);
     Task<NodeDto> GetByIdAsync(Guid id);
-    Task<List<NodeDto>> GetAllAsync();
+    Task<PagedResult<NodeDto>> GetPagedAsync(PaginationQuery query);
     
     Task<NodeDto> DetachFromGroupAsync(Guid id);
 }

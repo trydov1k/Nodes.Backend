@@ -1,4 +1,5 @@
 using Application.Abstractions;
+using Domain.DTOs;
 using Domain.DTOs.NodeGroups;
 using Domain.DTOs.Nodes;
 using Domain.Models;
@@ -48,22 +49,36 @@ public class NodeGroupService(INodeGroupRepository nodeGroupRepository,
         await nodeGroupRepository.SaveChangesAsync();
     }
 
-    public async Task<List<NodeGroupDto>> GetAllAsync()
-    {
-        var groups = await nodeGroupRepository.GetAllAsync();
-        return mapper.Map<List<NodeGroupDto>>(groups);
-    }
-
     public async Task<NodeGroupDto> GetByIdAsync(Guid id)
     {
         var group = await nodeGroupRepository.EnsureExistsAsync(id);
         return mapper.Map<NodeGroupDto>(group);
     }
-    
-    public async Task<List<NodeDto>> GetNodesByGroupId(Guid groupId)
+
+    public async Task<PagedResult<NodeGroupDto>> GetPagedAsync(PaginationQuery query)
+    {
+        var (items, totalCount) = await nodeGroupRepository.GetPagedAsync(query.Page, query.PageSize);
+        
+        return new PagedResult<NodeGroupDto>
+        {
+            Items = mapper.Map<List<NodeGroupDto>>(items),
+            Page = query.Page,
+            PageSize = query.PageSize,
+            TotalCount = totalCount
+        };
+    }
+
+    public async Task<PagedResult<NodeDto>> GetNodesByGroupId(Guid groupId, PaginationQuery query)
     {
         _ = await nodeGroupRepository.EnsureExistsAsync(groupId);
-        var nodes = await nodeRepository.GetByGroupId(groupId);
-        return mapper.Map<List<NodeDto>>(nodes);
+        var (items, totalCount) = await nodeRepository.GetByGroupId(groupId, query.Page, query.PageSize);
+        
+        return new PagedResult<NodeDto>
+        {
+            Items = mapper.Map<List<NodeDto>>(items),
+            Page = query.Page,
+            PageSize = query.PageSize,
+            TotalCount = totalCount
+        };
     }
 }

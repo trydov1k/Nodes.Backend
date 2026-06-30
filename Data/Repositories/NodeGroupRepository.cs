@@ -31,8 +31,19 @@ public class NodeGroupRepository(AppDbContext context) : INodeGroupRepository
         return await context.NodeGroups.FindAsync(id);
     }
 
-    public async Task<List<NodeGroup>> GetAllAsync()
+    public async Task<(List<NodeGroup> Items, int TotalCount)> GetPagedAsync(int page, int pageSize)
     {
-        return await context.NodeGroups.ToListAsync();
+        var query = context.NodeGroups
+            .OrderBy(group => group.Name)
+            .ThenBy(group => group.GroupId);
+
+        var totalCount = await query.CountAsync();
+
+        var items = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+        return (items, totalCount);
     }
 }

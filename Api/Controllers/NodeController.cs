@@ -21,10 +21,10 @@ public class NodeController(INodeService nodeService) : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<ApiResponse<List<NodeDto>>>> GetAll()
+    public async Task<ActionResult<ApiResponse<PagedResult<NodeDto>>>> GetAll([FromQuery] PaginationQuery query)
     {
-        var nodes = await nodeService.GetAllAsync();
-        return Ok(ApiResponse.Success(nodes));
+        var result = await nodeService.GetPagedAsync(query);
+        return Ok(ApiResponse.Success(result));
     }
 
     [HttpGet("{id:guid}")]

@@ -1,3 +1,4 @@
+using Domain.DTOs;
 using Domain.DTOs.NodeGroups;
 using Domain.DTOs.Nodes;
 
@@ -9,7 +10,7 @@ public interface INodeGroupService
     Task<NodeGroupDto> UpdateAsync(Guid id, UpdateNodeGroupDto dto);
     Task DeleteAsync(Guid id);
     Task<NodeGroupDto> GetByIdAsync(Guid id);
-    Task<List<NodeGroupDto>> GetAllAsync();
+    Task<PagedResult<NodeGroupDto>> GetPagedAsync(PaginationQuery query);
     
-    Task<List<NodeDto>> GetNodesByGroupId(Guid groupId);
+    Task<PagedResult<NodeDto>> GetNodesByGroupId(Guid groupId, PaginationQuery query);
 }

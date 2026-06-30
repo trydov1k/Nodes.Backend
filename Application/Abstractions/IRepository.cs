@@ -9,5 +9,4 @@ public interface IRepository<T>
     Task SaveChangesAsync();
     
     Task<T?> GetByIdAsync(Guid id);
-    Task<List<T>> GetAllAsync(); 
 }

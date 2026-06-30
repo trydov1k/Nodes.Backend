@@ -1,4 +1,5 @@
 using Application.Abstractions;
+using Domain.DTOs;
 using Domain.DTOs.Nodes;
 using Domain.Models;
 using MapsterMapper;
@@ -62,12 +63,18 @@ public class NodeService(INodeRepository nodeRepository,
         var node = await nodeRepository.EnsureExistsAsync(id);
         return mapper.Map<NodeDto>(node);
     }
-
-    public async Task<List<NodeDto>> GetAllAsync()
+    
+    public async Task<PagedResult<NodeDto>> GetPagedAsync(PaginationQuery query)
     {
-        var nodes = await nodeRepository.GetAllAsync();
-        
-        return mapper.Map<List<NodeDto>>(nodes);
+        var (items, totalCount) = await nodeRepository.GetPagedAsync(query.Page, query.PageSize);
+
+        return new PagedResult<NodeDto>
+        {
+            Items = mapper.Map<List<NodeDto>>(items),
+            Page = query.Page,
+            PageSize = query.PageSize,
+            TotalCount = totalCount
+        };
     }
 
     public async Task<NodeDto> DetachFromGroupAsync(Guid id)
