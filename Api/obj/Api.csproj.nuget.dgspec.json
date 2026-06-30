@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj": {}
+    "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj": {
+    "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
+        "projectUniqueName": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
+        "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
         "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\obj\\",
+        "outputPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,13 +31,14 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj"
+              "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj": {
+                "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj"
               },
-              "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj"
+              "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -56,6 +57,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Mapster": {
@@ -522,14 +524,14 @@
         }
       }
     },
-    "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj": {
+    "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj",
+        "projectUniqueName": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj",
+        "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\obj\\",
+        "outputPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -549,10 +551,11 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj"
+              "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -571,6 +574,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Mapster": {
@@ -884,14 +888,14 @@
         }
       }
     },
-    "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj": {
+    "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -911,6 +915,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -929,6 +934,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",

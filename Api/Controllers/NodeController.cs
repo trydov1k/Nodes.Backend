@@ -13,7 +13,11 @@ public class NodeController(INodeService nodeService) : ControllerBase
     public async Task<ActionResult<ApiResponse<NodeDto>>> Create([FromBody] CreateNodeDto dto)
     {
         var createdNode = await nodeService.CreateAsync(dto);
-        return Ok(ApiResponse.Success(createdNode));
+        
+        return CreatedAtAction(
+            nameof(GetById),
+            new { id = createdNode.NodeId },
+            ApiResponse.Success(createdNode));
     }
 
     [HttpGet]
@@ -38,7 +42,7 @@ public class NodeController(INodeService nodeService) : ControllerBase
     }
 
     [HttpDelete("{id:guid}")]
-    public async Task<ActionResult<ApiResponse<NodeDto>>> Delete([FromRoute] Guid id)
+    public async Task<ActionResult> Delete([FromRoute] Guid id)
     {
         await nodeService.DeleteAsync(id);
         return NoContent();

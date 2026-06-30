@@ -1,6 +1,7 @@
 using Data.Services;
 using Domain.DTOs;
 using Domain.DTOs.NodeGroups;
+using Domain.DTOs.Nodes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -14,7 +15,10 @@ public class NodeGroupController(INodeGroupService nodeGroupService,
     public async Task<ActionResult<ApiResponse<NodeGroupDto>>> Create([FromBody] CreateNodeGroupDto dto)
     {
         var createdGroup = await nodeGroupService.CreateAsync(dto);
-        return Ok(ApiResponse.Success(createdGroup));
+        return CreatedAtAction(
+            nameof(GetById),
+            new { id = createdGroup.GroupId },
+            ApiResponse.Success(createdGroup));
     }
 
     [HttpGet]
@@ -35,19 +39,19 @@ public class NodeGroupController(INodeGroupService nodeGroupService,
     public async Task<ActionResult<ApiResponse<NodeGroupDto>>> Update([FromRoute] Guid id,
         [FromBody] UpdateNodeGroupDto dto)
     {
-        var updatedGroup = nodeGroupService.UpdateAsync(id, dto);
+        var updatedGroup = await nodeGroupService.UpdateAsync(id, dto);
         return Ok(ApiResponse.Success(updatedGroup));
     }
 
     [HttpDelete("{id:guid}")]
-    public async Task<ActionResult<ApiResponse<NodeGroupDto>>> Delete([FromRoute] Guid id)
+    public async Task<ActionResult> Delete([FromRoute] Guid id)
     {
         await nodeGroupService.DeleteAsync(id);
         return NoContent();
     }
 
-    [HttpGet("{id}/nodes")]
-    public async Task<ActionResult<ApiResponse<List<NodeGroupDto>>>> GetGroupNodes([FromRoute] Guid id)
+    [HttpGet("{id:guid}/nodes")]
+    public async Task<ActionResult<ApiResponse<List<NodeDto>>>> GetGroupNodes([FromRoute] Guid id)
     {
         var nodes = await nodeService.GetByGroupId(id);
         return Ok(ApiResponse.Success(nodes));

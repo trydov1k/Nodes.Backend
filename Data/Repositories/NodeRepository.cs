@@ -44,6 +44,7 @@ public class NodeRepository(AppDbContext context) : INodeRepository
     {
         return context.Nodes
             .Where(node => node.GroupId == groupId)
+            .Include(node => node.Group)
             .ToListAsync();
     }
 }

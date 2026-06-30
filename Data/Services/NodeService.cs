@@ -12,6 +12,8 @@ public class NodeService(INodeRepository nodeRepository,
 {
     public async Task<NodeDto> CreateAsync(CreateNodeDto dto)
     {
+        if (dto.GroupId != null)
+            _ = await nodeGroupRepository.EnsureExistsAsync(dto.GroupId.Value);
         var newNode = new Node
         {
             NodeId = Guid.NewGuid(),
@@ -69,6 +71,7 @@ public class NodeService(INodeRepository nodeRepository,
 
     public async Task<List<NodeDto>> GetByGroupId(Guid groupId)
     {
+        _ = await nodeGroupRepository.EnsureExistsAsync(groupId);
         var nodes = await nodeRepository.GetByGroupId(groupId);
         return mapper.Map<List<NodeDto>>(nodes);
     }
