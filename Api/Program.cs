@@ -2,7 +2,6 @@ using Data;
 using Domain.DTOs;
 using Mapster;
 using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,13 +16,6 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-// Применение миграций
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    await db.Database.MigrateAsync();
-}
 
 app.UseExceptionHandler(appBuilder => appBuilder.Run(async context =>
 {

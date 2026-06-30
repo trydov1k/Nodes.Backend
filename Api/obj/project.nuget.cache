@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tnoBqgA4i5s=",
+  "dgSpecHash": "+K5FEF+zzLE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
+  "projectFilePath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mdimo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\mdimo\\.nuget\\packages\\mapster\\10.0.9\\mapster.10.0.9.nupkg.sha512",
