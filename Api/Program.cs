@@ -2,6 +2,7 @@ using Data;
 using Application;
 using Domain.DTOs;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +10,25 @@ builder.Services.AddMapping();
 builder.Services.AddContext();
 builder.Services.AddRepositories();
 builder.Services.AddServices();
-builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddControllers()
+    .ConfigureApiBehaviorOptions(options =>
+    {
+        options.InvalidModelStateResponseFactory = context =>
+        {
+            var errors = context.ModelState
+                .Where(e => e.Value?.Errors.Count > 0)
+                .SelectMany(e => e.Value!.Errors.Select(err =>
+                    string.IsNullOrEmpty(err.ErrorMessage)
+                        ? "Invalid value"
+                        : err.ErrorMessage))
+                .ToList();
+            var message = string.Join("; ", errors);
+            return new BadRequestObjectResult(ApiResponse<object>.Error(message));
+        };
+    });
+
 
 var app = builder.Build();
 

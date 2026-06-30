@@ -4,14 +4,14 @@
     "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj": {
+    "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj",
+        "projectUniqueName": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\obj\\",
+        "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\mdimo\\AppData\\Local\\Temp\\cursor-sandbox-cache\\3dff7e840b85b614286e4f1361287537\\nuget",
+        "outputPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -366,7 +366,7 @@
         "projectUniqueName": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj",
         "projectName": "Data",
         "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\mdimo\\AppData\\Local\\Temp\\cursor-sandbox-cache\\3dff7e840b85b614286e4f1361287537\\nuget",
         "outputPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -390,8 +390,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj"
+              "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj": {
+                "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj"
               },
               "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj": {
                 "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj"
@@ -725,7 +725,7 @@
         "projectUniqueName": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
         "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\mdimo\\AppData\\Local\\Temp\\cursor-sandbox-cache\\3dff7e840b85b614286e4f1361287537\\nuget",
         "outputPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [

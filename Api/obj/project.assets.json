@@ -2417,17 +2417,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mdimo\\.nuget\\packages\\": {},
+    "C:\\Users\\mdimo\\AppData\\Local\\Temp\\cursor-sandbox-cache\\3dff7e840b85b614286e4f1361287537\\nuget": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
+      "projectUniqueName": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
-      "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\obj\\",
+      "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\Api.csproj",
+      "packagesPath": "C:\\Users\\mdimo\\AppData\\Local\\Temp\\cursor-sandbox-cache\\3dff7e840b85b614286e4f1361287537\\nuget",
+      "outputPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2450,8 +2450,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj"
+            "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj": {
+              "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj"
             },
             "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj": {
               "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Data\\Data.csproj"
