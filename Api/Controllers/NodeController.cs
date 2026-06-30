@@ -42,10 +42,10 @@ public class NodeController(INodeService nodeService) : ControllerBase
     }
 
     [HttpDelete("{id:guid}/group")]
-    public async Task<ActionResult<ApiResponse<NodeDto>>> DetachFromGroup([FromRoute] Guid id)
+    public async Task<ActionResult> DetachFromGroup([FromRoute] Guid id)
     {
         var node = await nodeService.DetachFromGroupAsync(id);
-        return Ok(ApiResponse.Success(node));
+        return NoContent();
     }
 
     [HttpDelete("{id:guid}")]
