@@ -1,19 +1,20 @@
 using Application.Abstractions;
 using Data.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Data;
 
 public static class DataExtensions
 {
-    public static IServiceCollection AddContext(this IServiceCollection serviceCollection)
+    public static IServiceCollection AddContext(this IServiceCollection serviceCollection, IConfiguration configuration)
     {
-        var dbHost = "localhost";
-        var dbPort = "5432";
-        var dbName = "Nodes";
-        var dbUser = "postgres";
-        var dbPassword = "123456";
+        var dbHost = configuration["DB_HOST"] ?? throw new InvalidOperationException("env-parameter DB_HOST is required");
+        var dbPort = configuration["DB_PORT"] ?? throw new InvalidOperationException("env-parameter DB_PORT is required");
+        var dbName = configuration["DB_NAME"] ?? throw new InvalidOperationException("env-parameter DB_NAME is required");
+        var dbUser = configuration["DB_USER"] ?? throw new InvalidOperationException("env-parameter DB_USER is required");
+        var dbPassword = configuration["DB_PASSWORD"] ?? throw new InvalidOperationException("env-parameter DB_PASSWORD is required");
         
         serviceCollection.AddDbContext<AppDbContext>(x =>
         {

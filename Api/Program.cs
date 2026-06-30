@@ -4,10 +4,13 @@ using Domain.DTOs;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
+// Загрузка .env
+DotNetEnv.Env.TraversePath().Load();
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMapping();
-builder.Services.AddContext();
+builder.Services.AddContext(builder.Configuration);
 builder.Services.AddRepositories();
 builder.Services.AddServices();
 builder.Services.AddSwaggerGen();

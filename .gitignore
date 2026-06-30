@@ -26,6 +26,7 @@ artifacts/
 appsettings.*.local.json
 secrets.json
 **/Properties/launchSettings.json.user
+.env
 
 ## OS
 .DS_Store
