@@ -70,7 +70,7 @@ namespace Data.Migrations
                     b.HasOne("Domain.Models.NodeGroup", "Group")
                         .WithMany("Nodes")
                         .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Group");
                 });

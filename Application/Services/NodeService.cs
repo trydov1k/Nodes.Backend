@@ -57,7 +57,7 @@ public class NodeService(INodeRepository nodeRepository,
         await nodeRepository.SaveChangesAsync();
     }
 
-    public async Task<NodeDto?> GetByIdAsync(Guid id)
+    public async Task<NodeDto> GetByIdAsync(Guid id)
     {
         var node = await nodeRepository.EnsureExistsAsync(id);
         return mapper.Map<NodeDto>(node);
@@ -67,13 +67,6 @@ public class NodeService(INodeRepository nodeRepository,
     {
         var nodes = await nodeRepository.GetAllAsync();
         
-        return mapper.Map<List<NodeDto>>(nodes);
-    }
-
-    public async Task<List<NodeDto>> GetByGroupId(Guid groupId)
-    {
-        _ = await nodeGroupRepository.EnsureExistsAsync(groupId);
-        var nodes = await nodeRepository.GetByGroupId(groupId);
         return mapper.Map<List<NodeDto>>(nodes);
     }
 

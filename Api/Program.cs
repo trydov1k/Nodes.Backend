@@ -13,7 +13,9 @@ builder.Services.AddMapping();
 builder.Services.AddContext(builder.Configuration);
 builder.Services.AddRepositories();
 builder.Services.AddServices();
-builder.Services.AddSwaggerGen();
+
+if (builder.Environment.IsDevelopment())
+    builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllers()
     .ConfigureApiBehaviorOptions(options =>
@@ -50,8 +52,10 @@ app.UseExceptionHandler(appBuilder => appBuilder.Run(async context =>
     await context.Response.WriteAsJsonAsync(ApiResponse<object>.Error(message));
 }));
 
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();   
+}
 app.MapControllers();
-
-app.UseSwagger();
-app.UseSwaggerUI();
 app.Run();

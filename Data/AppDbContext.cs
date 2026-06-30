@@ -28,7 +28,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             .HasOne(node => node.Group)
             .WithMany(group => group.Nodes)
             .HasForeignKey(node => node.GroupId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.SetNull);
         
         base.OnModelCreating(modelBuilder);
     }

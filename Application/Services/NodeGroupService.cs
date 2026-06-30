@@ -1,11 +1,13 @@
 using Application.Abstractions;
 using Domain.DTOs.NodeGroups;
+using Domain.DTOs.Nodes;
 using Domain.Models;
 using MapsterMapper;
 
 namespace Application.Services;
 
 public class NodeGroupService(INodeGroupRepository nodeGroupRepository, 
+    INodeRepository nodeRepository,
     IMapper mapper) : INodeGroupService
 {
     public async Task<NodeGroupDto> CreateAsync(CreateNodeGroupDto dto)
@@ -56,5 +58,12 @@ public class NodeGroupService(INodeGroupRepository nodeGroupRepository,
     {
         var group = await nodeGroupRepository.EnsureExistsAsync(id);
         return mapper.Map<NodeGroupDto>(group);
+    }
+    
+    public async Task<List<NodeDto>> GetNodesByGroupId(Guid groupId)
+    {
+        _ = await nodeGroupRepository.EnsureExistsAsync(groupId);
+        var nodes = await nodeRepository.GetByGroupId(groupId);
+        return mapper.Map<List<NodeDto>>(nodes);
     }
 }

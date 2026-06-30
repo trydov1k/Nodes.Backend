@@ -1,4 +1,5 @@
 using Domain.DTOs.NodeGroups;
+using Domain.DTOs.Nodes;
 
 namespace Application.Services;
 
@@ -9,4 +10,6 @@ public interface INodeGroupService
     Task DeleteAsync(Guid id);
     Task<NodeGroupDto> GetByIdAsync(Guid id);
     Task<List<NodeGroupDto>> GetAllAsync();
+    
+    Task<List<NodeDto>> GetNodesByGroupId(Guid groupId);
 }

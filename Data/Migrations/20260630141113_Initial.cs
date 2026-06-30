@@ -41,7 +41,7 @@ namespace Data.Migrations
                         column: x => x.GroupId,
                         principalTable: "NodeGroups",
                         principalColumn: "GroupId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateIndex(

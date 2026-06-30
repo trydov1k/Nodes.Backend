@@ -8,8 +8,7 @@ namespace Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class NodeGroupController(INodeGroupService nodeGroupService,
-    INodeService nodeService) : ControllerBase
+public class NodeGroupController(INodeGroupService nodeGroupService) : ControllerBase
 {
     [HttpPost]
     public async Task<ActionResult<ApiResponse<NodeGroupDto>>> Create([FromBody] CreateNodeGroupDto dto)
@@ -53,7 +52,7 @@ public class NodeGroupController(INodeGroupService nodeGroupService,
     [HttpGet("{id:guid}/nodes")]
     public async Task<ActionResult<ApiResponse<List<NodeDto>>>> GetGroupNodes([FromRoute] Guid id)
     {
-        var nodes = await nodeService.GetByGroupId(id);
+        var nodes = await nodeGroupService.GetNodesByGroupId(id);
         return Ok(ApiResponse.Success(nodes));
     }
 }
