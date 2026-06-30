@@ -1,4 +1,4 @@
-namespace Data.Repositories;
+namespace Application.Abstractions;
 
 public interface IRepository<T>
     where T : class

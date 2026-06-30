@@ -8,9 +8,8 @@
     ".NETCoreApp,Version=v10.0": {
       "Data/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
           "Domain": "1.0.0",
-          "Mapster": "10.0.9",
-          "Mapster.DependencyInjection": "10.0.9",
           "Microsoft.EntityFrameworkCore": "10.0.9",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2"
         },
@@ -18,34 +17,34 @@
           "Data.dll": {}
         }
       },
-      "Mapster/10.0.9": {
+      "Mapster/10.0.10": {
         "dependencies": {
-          "Mapster.Core": "10.0.9"
+          "Mapster.Core": "10.0.10"
         },
         "runtime": {
           "lib/net10.0/Mapster.dll": {
-            "assemblyVersion": "10.0.9.0",
-            "fileVersion": "10.0.9.0"
+            "assemblyVersion": "10.0.10.0",
+            "fileVersion": "10.0.10.0"
           }
         }
       },
-      "Mapster.Core/10.0.9": {
+      "Mapster.Core/10.0.10": {
         "runtime": {
           "lib/netstandard2.0/Mapster.Core.dll": {
-            "assemblyVersion": "10.0.9.0",
-            "fileVersion": "10.0.9.0"
+            "assemblyVersion": "10.0.10.0",
+            "fileVersion": "10.0.10.0"
           }
         }
       },
-      "Mapster.DependencyInjection/10.0.9": {
+      "Mapster.DependencyInjection/10.0.10": {
         "dependencies": {
-          "Mapster": "10.0.9",
+          "Mapster": "10.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.9"
         },
         "runtime": {
           "lib/net10.0/Mapster.DependencyInjection.dll": {
-            "assemblyVersion": "10.0.9.0",
-            "fileVersion": "10.0.9.0"
+            "assemblyVersion": "10.0.10.0",
+            "fileVersion": "10.0.10.0"
           }
         }
       },
@@ -208,6 +207,19 @@
           }
         }
       },
+      "Application/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Mapster": "10.0.10",
+          "Mapster.DependencyInjection": "10.0.10"
+        },
+        "runtime": {
+          "Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Domain/1.0.0": {
         "runtime": {
           "Domain.dll": {
@@ -224,26 +236,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Mapster/10.0.9": {
+    "Mapster/10.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UQW0Fquj9czyZHtHq08OaceEvgXhNOY8n5Ezc8BALU6//MFLmM2xPW3mCNzcvrqpMNwvMhEy7MHlRSkkbfpMeQ==",
-      "path": "mapster/10.0.9",
-      "hashPath": "mapster.10.0.9.nupkg.sha512"
+      "sha512": "sha512-kAMFaMKi13GxNXmpd9JiTYXjZD5B1+UN5eCke3E4hrCZLwNPyMCOF7CGyZvuiEJHfq2/ZWsXnqUR9PIZ1viB1A==",
+      "path": "mapster/10.0.10",
+      "hashPath": "mapster.10.0.10.nupkg.sha512"
     },
-    "Mapster.Core/10.0.9": {
+    "Mapster.Core/10.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v6/hzOlSyCzlwize5PbRtiBCuWDjUEeH3S2pYXa+B7gD+HPn+6kTavCfjwA7olhOq78ufMw5bGOXhwCcJOZ+sQ==",
-      "path": "mapster.core/10.0.9",
-      "hashPath": "mapster.core.10.0.9.nupkg.sha512"
+      "sha512": "sha512-EsBABlsVcE/25SJQx4pi+6LB6jwih3mTpedWD9X8aybvunpDIRS5tQErdJLY7tfpDTA2xTmnCre/qwcAxNcbmw==",
+      "path": "mapster.core/10.0.10",
+      "hashPath": "mapster.core.10.0.10.nupkg.sha512"
     },
-    "Mapster.DependencyInjection/10.0.9": {
+    "Mapster.DependencyInjection/10.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dvcqQ3lJoNtSXjQzATYzXQd31bSuE9/g8cdWM6vtOj9Q5Q8ux/N2JZnmL8/5hF3valZg6daFK1SCnzCbJN14Qw==",
-      "path": "mapster.dependencyinjection/10.0.9",
-      "hashPath": "mapster.dependencyinjection.10.0.9.nupkg.sha512"
+      "sha512": "sha512-1YcAtNAm2O9NoO81H6YLKseruXtzPVb44f5MJ6JGqZnkGQs2KIa48D7tStnPR54amy3Qyp93B/zOFzfAmLx1kg==",
+      "path": "mapster.dependencyinjection/10.0.10",
+      "hashPath": "mapster.dependencyinjection.10.0.10.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/10.0.9": {
       "type": "package",
@@ -342,6 +354,11 @@
       "sha512": "sha512-PsNYgPOSW41Xx19gin7y4EdZAPteWr9Cb01XkdObxOsPzi+mgBupBEN7J7+erXFsROPOILM7MlIoO9QzL8+LGQ==",
       "path": "npgsql.entityframeworkcore.postgresql/10.0.2",
       "hashPath": "npgsql.entityframeworkcore.postgresql.10.0.2.nupkg.sha512"
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Domain/1.0.0": {
       "type": "project",

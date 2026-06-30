@@ -1,6 +1,6 @@
-using Data.Repositories;
+using Application.Abstractions;
 
-namespace Data;
+namespace Application;
 
 public static class RepositoryExtensions
 {

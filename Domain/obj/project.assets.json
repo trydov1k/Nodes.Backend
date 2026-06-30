@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\mdimo\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

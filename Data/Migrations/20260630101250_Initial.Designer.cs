@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260628141402_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260630101250_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Node", b =>
+            modelBuilder.Entity("Domain.Models.Node", b =>
                 {
                     b.Property<Guid>("NodeId")
                         .ValueGeneratedOnAdd()
@@ -49,7 +49,7 @@ namespace Data.Migrations
                     b.ToTable("Nodes");
                 });
 
-            modelBuilder.Entity("Domain.NodeGroup", b =>
+            modelBuilder.Entity("Domain.Models.NodeGroup", b =>
                 {
                     b.Property<Guid>("GroupId")
                         .ValueGeneratedOnAdd()
@@ -68,9 +68,9 @@ namespace Data.Migrations
                     b.ToTable("NodeGroups");
                 });
 
-            modelBuilder.Entity("Domain.Node", b =>
+            modelBuilder.Entity("Domain.Models.Node", b =>
                 {
-                    b.HasOne("Domain.NodeGroup", "Group")
+                    b.HasOne("Domain.Models.NodeGroup", "Group")
                         .WithMany("Nodes")
                         .HasForeignKey("GroupId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -78,7 +78,7 @@ namespace Data.Migrations
                     b.Navigation("Group");
                 });
 
-            modelBuilder.Entity("Domain.NodeGroup", b =>
+            modelBuilder.Entity("Domain.Models.NodeGroup", b =>
                 {
                     b.Navigation("Nodes");
                 });

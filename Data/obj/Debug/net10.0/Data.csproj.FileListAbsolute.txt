@@ -30,3 +30,5 @@ C:\Users\mdimo\RiderProjects\Nodes.Backend\Data\obj\Debug\net10.0\Data.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Data\obj\Debug\net10.0\refint\Data.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Data\obj\Debug\net10.0\Data.pdb
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Data\obj\Debug\net10.0\ref\Data.dll
+C:\Users\mdimo\RiderProjects\Nodes.Backend\Data\bin\Debug\net10.0\Application.dll
+C:\Users\mdimo\RiderProjects\Nodes.Backend\Data\bin\Debug\net10.0\Application.pdb

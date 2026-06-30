@@ -1,6 +1,6 @@
 using Domain.DTOs.NodeGroups;
 
-namespace Data.Services;
+namespace Application.Services;
 
 public interface INodeGroupService
 {

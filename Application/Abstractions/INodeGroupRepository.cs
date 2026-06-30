@@ -1,7 +1,6 @@
-using Domain;
 using Domain.Models;
 
-namespace Data.Repositories;
+namespace Application.Abstractions;
 
 public interface INodeGroupRepository : IRepository<NodeGroup>
 {

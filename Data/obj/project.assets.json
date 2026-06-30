@@ -2,10 +2,10 @@
   "version": 4,
   "targets": {
     "net10.0": {
-      "Mapster/10.0.9": {
+      "Mapster/10.0.10": {
         "type": "package",
         "dependencies": {
-          "Mapster.Core": "10.0.9"
+          "Mapster.Core": "10.0.10"
         },
         "compile": {
           "lib/net10.0/Mapster.dll": {}
@@ -14,7 +14,7 @@
           "lib/net10.0/Mapster.dll": {}
         }
       },
-      "Mapster.Core/10.0.9": {
+      "Mapster.Core/10.0.10": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Mapster.Core.dll": {}
@@ -23,10 +23,10 @@
           "lib/netstandard2.0/Mapster.Core.dll": {}
         }
       },
-      "Mapster.DependencyInjection/10.0.9": {
+      "Mapster.DependencyInjection/10.0.10": {
         "type": "package",
         "dependencies": {
-          "Mapster": "10.0.9",
+          "Mapster": "10.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
         },
         "compile": {
@@ -299,6 +299,21 @@
           }
         }
       },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Mapster": "10.0.10",
+          "Mapster.DependencyInjection": "10.0.10"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -312,10 +327,10 @@
     }
   },
   "libraries": {
-    "Mapster/10.0.9": {
-      "sha512": "UQW0Fquj9czyZHtHq08OaceEvgXhNOY8n5Ezc8BALU6//MFLmM2xPW3mCNzcvrqpMNwvMhEy7MHlRSkkbfpMeQ==",
+    "Mapster/10.0.10": {
+      "sha512": "kAMFaMKi13GxNXmpd9JiTYXjZD5B1+UN5eCke3E4hrCZLwNPyMCOF7CGyZvuiEJHfq2/ZWsXnqUR9PIZ1viB1A==",
       "type": "package",
-      "path": "mapster/10.0.9",
+      "path": "mapster/10.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -324,27 +339,27 @@
         "lib/net8.0/Mapster.dll",
         "lib/net9.0/Mapster.dll",
         "lib/netstandard2.0/Mapster.dll",
-        "mapster.10.0.9.nupkg.sha512",
+        "mapster.10.0.10.nupkg.sha512",
         "mapster.nuspec"
       ]
     },
-    "Mapster.Core/10.0.9": {
-      "sha512": "v6/hzOlSyCzlwize5PbRtiBCuWDjUEeH3S2pYXa+B7gD+HPn+6kTavCfjwA7olhOq78ufMw5bGOXhwCcJOZ+sQ==",
+    "Mapster.Core/10.0.10": {
+      "sha512": "EsBABlsVcE/25SJQx4pi+6LB6jwih3mTpedWD9X8aybvunpDIRS5tQErdJLY7tfpDTA2xTmnCre/qwcAxNcbmw==",
       "type": "package",
-      "path": "mapster.core/10.0.9",
+      "path": "mapster.core/10.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.0/Mapster.Core.dll",
-        "mapster.core.10.0.9.nupkg.sha512",
+        "mapster.core.10.0.10.nupkg.sha512",
         "mapster.core.nuspec"
       ]
     },
-    "Mapster.DependencyInjection/10.0.9": {
-      "sha512": "dvcqQ3lJoNtSXjQzATYzXQd31bSuE9/g8cdWM6vtOj9Q5Q8ux/N2JZnmL8/5hF3valZg6daFK1SCnzCbJN14Qw==",
+    "Mapster.DependencyInjection/10.0.10": {
+      "sha512": "1YcAtNAm2O9NoO81H6YLKseruXtzPVb44f5MJ6JGqZnkGQs2KIa48D7tStnPR54amy3Qyp93B/zOFzfAmLx1kg==",
       "type": "package",
-      "path": "mapster.dependencyinjection/10.0.9",
+      "path": "mapster.dependencyinjection/10.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -353,7 +368,7 @@
         "lib/net8.0/Mapster.DependencyInjection.dll",
         "lib/net9.0/Mapster.DependencyInjection.dll",
         "lib/netstandard2.0/Mapster.DependencyInjection.dll",
-        "mapster.dependencyinjection.10.0.9.nupkg.sha512",
+        "mapster.dependencyinjection.10.0.10.nupkg.sha512",
         "mapster.dependencyinjection.nuspec"
       ]
     },
@@ -778,6 +793,11 @@
         "postgresql.png"
       ]
     },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -786,9 +806,8 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Application >= 1.0.0",
       "Domain >= 1.0.0",
-      "Mapster >= 10.0.9",
-      "Mapster.DependencyInjection >= 10.0.9",
       "Microsoft.EntityFrameworkCore >= 10.0.9",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.2"
     ]
@@ -827,6 +846,9 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
+            "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj"
+            },
             "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj": {
               "projectPath": "c:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Domain\\Domain.csproj"
             }
@@ -850,14 +872,6 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
-          "Mapster": {
-            "target": "Package",
-            "version": "[10.0.9, )"
-          },
-          "Mapster.DependencyInjection": {
-            "target": "Package",
-            "version": "[10.0.9, )"
-          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[10.0.9, )"

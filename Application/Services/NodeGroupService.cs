@@ -1,11 +1,12 @@
-using Data.Repositories;
+using Application.Abstractions;
 using Domain.DTOs.NodeGroups;
 using Domain.Models;
 using MapsterMapper;
 
-namespace Data.Services;
+namespace Application.Services;
 
-public class NodeGroupService(INodeGroupRepository nodeGroupRepository, IMapper mapper) : INodeGroupService
+public class NodeGroupService(INodeGroupRepository nodeGroupRepository, 
+    IMapper mapper) : INodeGroupService
 {
     public async Task<NodeGroupDto> CreateAsync(CreateNodeGroupDto dto)
     {

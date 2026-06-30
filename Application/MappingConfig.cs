@@ -3,7 +3,7 @@ using Domain.DTOs.Nodes;
 using Domain.Models;
 using Mapster;
 
-namespace Data;
+namespace Application;
 
 public static class MappingConfig
 {

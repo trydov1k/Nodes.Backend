@@ -1,10 +1,9 @@
-using Data.Repositories;
-using Domain;
+using Application.Abstractions;
 using Domain.DTOs.Nodes;
 using Domain.Models;
 using MapsterMapper;
 
-namespace Data.Services;
+namespace Application.Services;
 
 public class NodeService(INodeRepository nodeRepository, 
     INodeGroupRepository nodeGroupRepository,

@@ -141,7 +141,6 @@ C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Humanizer.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Mapster.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Mapster.Core.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Mapster.DependencyInjection.dll
-C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Microsoft.Build.Framework.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -262,3 +261,5 @@ C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\obj\Debug\net10.0\refint\Api.dll
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\obj\Debug\net10.0\Api.pdb
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\obj\Debug\net10.0\Api.genruntimeconfig.cache
 C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\obj\Debug\net10.0\ref\Api.dll
+C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Application.dll
+C:\Users\mdimo\RiderProjects\Nodes.Backend\Api\bin\Debug\net10.0\Application.pdb

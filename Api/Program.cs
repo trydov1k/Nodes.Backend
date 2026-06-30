@@ -1,17 +1,14 @@
 using Data;
+using Application;
 using Domain.DTOs;
-using Mapster;
 using Microsoft.AspNetCore.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
-MappingConfig.Configure();
-builder.Services.AddMapster();
-
+builder.Services.AddMapping();
 builder.Services.AddContext();
 builder.Services.AddRepositories();
 builder.Services.AddServices();
-
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 

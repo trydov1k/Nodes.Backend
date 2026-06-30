@@ -1,5 +1,5 @@
+using Application.Abstractions;
 using Data.Repositories;
-using Data.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -28,14 +28,6 @@ public static class DataExtensions
         serviceCollection.AddScoped<INodeRepository, NodeRepository>();
         serviceCollection.AddScoped<INodeGroupRepository, NodeGroupRepository>();
 
-        return serviceCollection;
-    }
-    
-    public static IServiceCollection AddServices(this IServiceCollection serviceCollection)
-    {
-        serviceCollection.AddScoped<INodeService, NodeService>();
-        serviceCollection.AddScoped<INodeGroupService, NodeGroupService>();
-        
         return serviceCollection;
     }
 }

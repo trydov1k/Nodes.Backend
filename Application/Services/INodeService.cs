@@ -1,7 +1,6 @@
-using Domain;
 using Domain.DTOs.Nodes;
 
-namespace Data.Services;
+namespace Application.Services;
 
 public interface INodeService
 {

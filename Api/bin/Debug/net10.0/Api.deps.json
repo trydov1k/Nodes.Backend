@@ -8,11 +8,9 @@
     ".NETCoreApp,Version=v10.0": {
       "Api/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
           "Data": "1.0.0",
           "Domain": "1.0.0",
-          "Mapster": "10.0.9",
-          "Mapster.DependencyInjection": "10.0.9",
-          "Microsoft.AspNetCore.OpenApi": "10.0.8",
           "Microsoft.EntityFrameworkCore.Design": "10.0.9",
           "Swashbuckle.AspNetCore.SwaggerGen": "10.2.3",
           "Swashbuckle.AspNetCore.SwaggerUI": "10.2.3"
@@ -29,44 +27,33 @@
           }
         }
       },
-      "Mapster/10.0.9": {
+      "Mapster/10.0.10": {
         "dependencies": {
-          "Mapster.Core": "10.0.9"
+          "Mapster.Core": "10.0.10"
         },
         "runtime": {
           "lib/net10.0/Mapster.dll": {
-            "assemblyVersion": "10.0.9.0",
-            "fileVersion": "10.0.9.0"
+            "assemblyVersion": "10.0.10.0",
+            "fileVersion": "10.0.10.0"
           }
         }
       },
-      "Mapster.Core/10.0.9": {
+      "Mapster.Core/10.0.10": {
         "runtime": {
           "lib/netstandard2.0/Mapster.Core.dll": {
-            "assemblyVersion": "10.0.9.0",
-            "fileVersion": "10.0.9.0"
+            "assemblyVersion": "10.0.10.0",
+            "fileVersion": "10.0.10.0"
           }
         }
       },
-      "Mapster.DependencyInjection/10.0.9": {
+      "Mapster.DependencyInjection/10.0.10": {
         "dependencies": {
-          "Mapster": "10.0.9"
+          "Mapster": "10.0.10"
         },
         "runtime": {
           "lib/net10.0/Mapster.DependencyInjection.dll": {
-            "assemblyVersion": "10.0.9.0",
-            "fileVersion": "10.0.9.0"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.OpenApi/10.0.8": {
-        "dependencies": {
-          "Microsoft.OpenApi": "2.7.5"
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "assemblyVersion": "10.0.8.0",
-            "fileVersion": "10.0.826.23019"
+            "assemblyVersion": "10.0.10.0",
+            "fileVersion": "10.0.10.0"
           }
         }
       },
@@ -561,11 +548,23 @@
           }
         }
       },
-      "Data/1.0.0": {
+      "Application/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
-          "Mapster": "10.0.9",
-          "Mapster.DependencyInjection": "10.0.9",
+          "Mapster": "10.0.10",
+          "Mapster.DependencyInjection": "10.0.10"
+        },
+        "runtime": {
+          "Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Data/1.0.0": {
+        "dependencies": {
+          "Application": "1.0.0",
+          "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.9",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2"
         },
@@ -599,33 +598,26 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "Mapster/10.0.9": {
+    "Mapster/10.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UQW0Fquj9czyZHtHq08OaceEvgXhNOY8n5Ezc8BALU6//MFLmM2xPW3mCNzcvrqpMNwvMhEy7MHlRSkkbfpMeQ==",
-      "path": "mapster/10.0.9",
-      "hashPath": "mapster.10.0.9.nupkg.sha512"
+      "sha512": "sha512-kAMFaMKi13GxNXmpd9JiTYXjZD5B1+UN5eCke3E4hrCZLwNPyMCOF7CGyZvuiEJHfq2/ZWsXnqUR9PIZ1viB1A==",
+      "path": "mapster/10.0.10",
+      "hashPath": "mapster.10.0.10.nupkg.sha512"
     },
-    "Mapster.Core/10.0.9": {
+    "Mapster.Core/10.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v6/hzOlSyCzlwize5PbRtiBCuWDjUEeH3S2pYXa+B7gD+HPn+6kTavCfjwA7olhOq78ufMw5bGOXhwCcJOZ+sQ==",
-      "path": "mapster.core/10.0.9",
-      "hashPath": "mapster.core.10.0.9.nupkg.sha512"
+      "sha512": "sha512-EsBABlsVcE/25SJQx4pi+6LB6jwih3mTpedWD9X8aybvunpDIRS5tQErdJLY7tfpDTA2xTmnCre/qwcAxNcbmw==",
+      "path": "mapster.core/10.0.10",
+      "hashPath": "mapster.core.10.0.10.nupkg.sha512"
     },
-    "Mapster.DependencyInjection/10.0.9": {
+    "Mapster.DependencyInjection/10.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dvcqQ3lJoNtSXjQzATYzXQd31bSuE9/g8cdWM6vtOj9Q5Q8ux/N2JZnmL8/5hF3valZg6daFK1SCnzCbJN14Qw==",
-      "path": "mapster.dependencyinjection/10.0.9",
-      "hashPath": "mapster.dependencyinjection.10.0.9.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.OpenApi/10.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cw24xHE2QaWwyEG9GQwFbjboyabub6Vd80DIItUGENzcQOa/BEnTrXsg2GADqWTmY/3ycqk9ToLGjgvF/VRlGA==",
-      "path": "microsoft.aspnetcore.openapi/10.0.8",
-      "hashPath": "microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512"
+      "sha512": "sha512-1YcAtNAm2O9NoO81H6YLKseruXtzPVb44f5MJ6JGqZnkGQs2KIa48D7tStnPR54amy3Qyp93B/zOFzfAmLx1kg==",
+      "path": "mapster.dependencyinjection/10.0.10",
+      "hashPath": "mapster.dependencyinjection.10.0.10.nupkg.sha512"
     },
     "Microsoft.Build.Framework/18.0.2": {
       "type": "package",
@@ -815,6 +807,11 @@
       "sha512": "sha512-aRZlojCCGEHDKqh43jaDgaVpYETsgd7Nx4g1zwLKMtv4iTo0627715ajEFNpEEBTgLmvZuv8K0EVxc3sM4NWJA==",
       "path": "system.composition.typedparts/9.0.0",
       "hashPath": "system.composition.typedparts.9.0.0.nupkg.sha512"
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Data/1.0.0": {
       "type": "project",

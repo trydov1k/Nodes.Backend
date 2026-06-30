@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "EeWOn4YAg8I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mdimo\\RiderProjects\\Nodes.Backend\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mdimo\\.nuget\\packages\\mapster\\10.0.10\\mapster.10.0.10.nupkg.sha512",
+    "C:\\Users\\mdimo\\.nuget\\packages\\mapster.core\\10.0.10\\mapster.core.10.0.10.nupkg.sha512",
+    "C:\\Users\\mdimo\\.nuget\\packages\\mapster.dependencyinjection\\10.0.10\\mapster.dependencyinjection.10.0.10.nupkg.sha512",
+    "C:\\Users\\mdimo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
