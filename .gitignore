@@ -1,0 +1,46 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio / Rider / VS Code
+.vs/
+.idea/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.rsuser
+
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## User-specific / secrets
+appsettings.*.local.json
+secrets.json
+**/Properties/launchSettings.json.user
+
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+
+## JetBrains Rider
+*.sln.iml
+rider.project.model.nuget.info
+rider.project.restore.info
+project.packagespec.json
