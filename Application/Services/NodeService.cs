@@ -74,4 +74,14 @@ public class NodeService(INodeRepository nodeRepository,
         var nodes = await nodeRepository.GetByGroupId(groupId);
         return mapper.Map<List<NodeDto>>(nodes);
     }
+
+    public async Task<NodeDto> DetachFromGroupAsync(Guid id)
+    {
+        var node = await nodeRepository.EnsureExistsAsync(id);
+        node.GroupId = null;
+        node.Group = null;
+        nodeRepository.Update(node);
+        await nodeRepository.SaveChangesAsync();
+        return mapper.Map<NodeDto>(node);
+    }
 }

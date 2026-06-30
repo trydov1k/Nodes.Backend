@@ -11,4 +11,5 @@ public interface INodeService
     Task<List<NodeDto>> GetAllAsync();
 
     Task<List<NodeDto>> GetByGroupId(Guid groupId);
+    Task<NodeDto> DetachFromGroupAsync(Guid id);
 }
