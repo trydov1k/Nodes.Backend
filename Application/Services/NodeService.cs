@@ -11,14 +11,16 @@ public class NodeService(INodeRepository nodeRepository,
 {
     public async Task<NodeDto> CreateAsync(CreateNodeDto dto)
     {
+        NodeGroup? group = null;
         if (dto.GroupId != null)
-            _ = await nodeGroupRepository.EnsureExistsAsync(dto.GroupId.Value);
+            group = await nodeGroupRepository.EnsureExistsAsync(dto.GroupId.Value);
         var newNode = new Node
         {
             NodeId = Guid.NewGuid(),
             Header = dto.Header,
             Text = dto.Text,
-            GroupId = dto.GroupId
+            GroupId = dto.GroupId,
+            Group = group
         };
         
         await nodeRepository.AddAsync(newNode);
